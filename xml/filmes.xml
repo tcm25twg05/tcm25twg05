@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<festival xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="filmes.xsd">
+    
+    <filme id="f1">
+        <titulo>O Último Pixel</titulo>
+        <genero>Ficção Científica</genero>
+        <cartaz>images/filme_um.jpg</cartaz>
+        <sinopse>Num futuro onde as emoções são compradas digitalmente, um jovem tenta recuperar uma memória antiga que foi corrompida. Uma reflexão sobre o que é real e o que é artificial na era da tecnologia.</sinopse>
+    </filme>
+
+    <filme id="f2">
+        <titulo>Café Frio</titulo>
+        <genero>Drama</genero>
+        <cartaz>images/filme_dois.jpg</cartaz>
+        <sinopse>A história de uma noite interminável na biblioteca da universidade, onde três desconhecidos partilham o silêncio, a ansiedade dos prazos e a solidão da vida académica.</sinopse>
+    </filme>
+
+    <filme id="f3">
+        <titulo>Ecos</titulo>
+        <genero>Suspense</genero>
+        <cartaz>images/filme_tres.jpg</cartaz>
+        <sinopse>Durante uma gravação de som para um projeto, uma estudante capta uma voz que não deveria estar ali. À medida que limpa o áudio, descobre um segredo escondido nas paredes da faculdade.</sinopse>
+    </filme>
+
+    <filme id="f4">
+        <titulo>Concreto</titulo>
+        <genero>Documentário</genero>
+        <cartaz>images/filme_quatro.jpg</cartaz>
+        <sinopse>Uma viagem visual pela arquitetura da cidade da Maia e pelas pessoas invisíveis que a habitam. Um olhar poético sobre como o betão molda as nossas rotinas.</sinopse>
+    </filme>
+
+    <filme id="f5">
+        <titulo>Loop</titulo>
+        <genero>Experimental</genero>
+        <cartaz>images/filme_cinco.jpg</cartaz>
+        <sinopse>Um homem acorda, prepara o pequeno-almoço e sai de casa. Mas o dia repete-se vezes sem conta, com pequenas alterações bizarras a cada ciclo. Será um sonho ou uma falha na realidade?</sinopse>
+    </filme>
+
+</festival>
