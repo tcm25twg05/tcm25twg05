@@ -1,0 +1,366 @@
+/* =========================================
+   1. RESET & GERAL
+   ========================================= */
+body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fcf6e8;
+    color: #333;
+}
+
+/* Utilitários */
+.marginTop-normal { margin-top: 50px !important; }
+.mt-large { margin-top: 30px; }
+.mb-none { margin-bottom: 0 !important; }
+
+/* Fundo para Páginas Internas */
+body.bg-programa {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/fundo_programa.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+/* =========================================
+   2. LAYOUT & GRID (ESTRUTURA)
+   ========================================= */
+.main-wrapper {
+    max-width: 1200px;
+    margin: -50px auto 50px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.content-box {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.content-box h2 {
+    color: #b71c1c;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.content-box.destaque { border-left: 5px solid #e63946; }
+
+.link-destaque {
+    display: inline-block;
+    margin-top: 10px;
+    color: #e63946;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.noticias ul { padding-left: 20px; }
+.noticias li { margin-bottom: 10px; color: #555; }
+
+/* Título de Página (Interna) */
+.page-title { text-align: center; margin-bottom: 40px; }
+.page-title h2 {
+    font-size: 2.5em;
+    color: #b71c1c;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+.page-title p { color: #666; font-size: 1.1em; }
+
+.border-bottom-light { 
+    border-bottom: 2px solid #eee; 
+    padding-bottom: 10px; 
+    margin-bottom: 20px; 
+}
+
+.grid-info { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+
+/* =========================================
+   3. NAVEGAÇÃO & MENU
+   ========================================= */
+.top-nav {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+}
+
+.top-nav ul { list-style: none; padding: 0; margin: 0; }
+.top-nav ul li { display: inline-block; }
+.top-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    padding: 0 10px;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+.top-nav ul li a:hover { color: #e63946; }
+
+.top-nav ul li:not(:last-child)::after {
+    content: "|";
+    color: rgba(255,255,255,0.5);
+    margin-left: 15px;
+}
+
+.internal-header {
+    background-color: transparent;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 50px;
+}
+.internal-nav { position: static !important; margin: 0; padding: 0; }
+
+/* =========================================
+   4. CABEÇALHO HERO & BOTÕES
+   ========================================= */
+.hero-section {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/fundo_home.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 50px;
+    position: relative;
+    color: white;
+}
+
+.hero-content h1 {
+    font-weight: 900;
+    font-size: 4.5em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 0;
+    line-height: 1.1;
+    text-shadow: 2px 2px 15px rgba(0,0,0,0.6);
+}
+
+.hero-content p { font-size: 1.5em; margin-top: 10px; font-weight: 300; }
+
+/* O Botão recuperado */
+.btn {
+    background-color: #222;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+.btn:hover { background-color: #555; }
+
+/* =========================================
+   5. COMPONENTES (TABELAS E LISTAS)
+   ========================================= */
+.table-responsive { overflow-x: auto; }
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+.table-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.schedule-table th, .schedule-table td { padding: 20px 15px; text-align: left; }
+
+.table-header-day {
+    background-color: #b71c1c !important;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    padding: 15px !important;
+    text-align: center !important;
+}
+
+.table-sub-header th { background-color: #333; color: white; font-weight: normal; font-size: 0.9em; text-transform: uppercase; }
+.time-col { font-weight: bold; color: #b71c1c; width: 100px; }
+.tag-filme {
+    display: inline-block; font-size: 0.7em; background-color: #eee; color: #555;
+    padding: 2px 6px; border-radius: 4px; margin-right: 8px; text-transform: uppercase; vertical-align: middle;
+}
+
+.schedule-table tbody tr { border-bottom: 1px solid #eee; transition: background-color 0.2s; }
+.movie-row:hover .time-col, .movie-row:hover .time-col + td {
+    background-color: #ffe6e6; color: #b71c1c; transition: background-color 0.3s; cursor: pointer; border-radius: 4px;
+}
+
+.break-row td { background-color: #fff3cd !important; color: #856404; font-weight: normal; vertical-align: middle; }
+.break-row .time-col { color: #856404; background-color: #fff3cd !important; }
+
+.schedule-table tfoot td { background-color: #f9f9f9; color: #777; font-size: 0.85em; text-align: center; padding: 10px; }
+
+/* Tipografia Utilitária */
+.strong { color: #b71c1c; }
+.text-brand-red { color: #b71c1c; margin-bottom: 15px; }
+.address-clean { font-style: normal; line-height: 1.6; }
+.list-styled { padding-left: 20px; line-height: 1.6; }
+.sub-list { color: #666; font-size: 0.9em; margin-top: 5px; }
+.list-none { padding-left: 0; list-style: none; }
+.contact-item { margin-bottom: 15px; }
+.contact-link { color: #b71c1c; text-decoration: none; font-size: 0.9em; }
+.def-desc { margin-left: 0; margin-bottom: 10px; color: #555; }
+
+/* Flutuação e Posicionamento (Padrão) */
+.float-box {
+    float: right;
+    width: 150px;
+    margin: 10px 0 20px 20px;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    position: relative;
+    top: 5px;
+}
+
+/* =========================================
+   6. GALERIA DE FILMES
+   ========================================= */
+.gallery-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 20px 0; min-height: 400px; }
+
+figure { 
+    background-color: white; width: 220px; margin: 0; border-radius: 8px; overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; border: 1px solid #eee;
+}
+figure:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(183, 28, 28, 0.3); border-color: #b71c1c; }
+figure img { width: 100%; height: 330px; object-fit: cover; display: block; }
+figcaption { padding: 15px; text-align: center; }
+figcaption h3 { margin: 0 0 5px 0; font-size: 1.1em; color: #222; font-weight: 700; }
+figcaption p { color: #666; font-size: 0.85em; text-transform: uppercase; letter-spacing: 1px; margin: 0; }
+
+figure.ativo {
+    width: 100%; max-width: 900px; display: flex; flex-direction: row; align-items: flex-start;
+    transform: none !important; box-shadow: none; border: none; cursor: default; animation: fadeIn 0.5s ease;
+}
+figure.ativo img { width: 300px; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+figure.ativo figcaption { position: relative; padding: 0 40px; text-align: left; flex: 1; }
+figure.ativo h3 { font-size: 2.5em; color: #b71c1c; margin-bottom: 10px; font-weight: 900; }
+figure.ativo p { position: relative; font-size: 1em; font-weight: bold; color: #333; margin-bottom: 20px; }
+
+.sinopse-texto {
+    display: none; font-size: 1.1em; line-height: 1.6; color: #555; border-top: 1px solid #eee;
+    padding-top: 20px; font-weight: normal; text-transform: none; letter-spacing: normal;
+}
+figure.ativo .sinopse-texto { display: block; }
+
+.btn-fechar {
+    display: none; position: absolute; top: 0; right: 0; font-size: 1.5em; color: #ccc;
+    cursor: pointer; font-weight: bold; z-index: 100; line-height: 1; transition: color 0.3s; transform: none !important;
+}
+figure.ativo .btn-fechar { display: block; }
+.btn-fechar:hover { color: #b71c1c; }
+figure.inativo { display: none; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* =========================================
+   7. FORMULÁRIOS
+   ========================================= */
+form { background-color: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin: 0 auto; }
+.form-group { margin-bottom: 20px; }
+.form-intro { margin-bottom: 20px; font-size: 0.9em; color: #666; }
+label { display: block; margin-bottom: 8px; font-weight: 700; color: #b71c1c; font-size: 0.95em; text-transform: uppercase; letter-spacing: 1px; }
+
+input[type="text"], input[type="email"], select, textarea {
+    width: 100%; padding: 15px; border: 2px solid #eee; border-radius: 6px; font-family: 'Montserrat', sans-serif;
+    font-size: 1em; background-color: #f9f9f9; transition: border-color 0.3s, background-color 0.3s; box-sizing: border-box;
+}
+input:focus, select:focus, textarea:focus { outline: none; border-color: #b71c1c; background-color: white; }
+textarea { resize: vertical; }
+
+.btn-submit {
+    background-color: #b71c1c; color: white; width: 100%; padding: 15px; border: none; border-radius: 6px;
+    font-size: 1.1em; font-weight: 900; text-transform: uppercase; cursor: pointer; transition: background-color 0.3s, transform 0.2s;
+    letter-spacing: 1px; margin-top: 10px;
+}
+.btn-submit:hover { background-color: #d32f2f; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(183, 28, 28, 0.4); }
+
+/* =========================================
+   8. RODAPÉ E LOGO
+   ========================================= */
+footer { background-color: #b71c1c; color: white; text-align: center; padding: 40px 20px; margin-top: 50px; }
+.credits { font-size: 0.8em; opacity: 0.7; margin-top: 20px !important; }
+footer a { color: white; text-decoration: underline; }
+footer a:hover { color: #fcf6e8; text-decoration: none; }
+
+.logo-footer {
+    display: block; width: 150px; height: 50px; margin: 0 auto 10px;
+    background-image: url('../images/logo_festival.png'); background-size: contain; background-repeat: no-repeat;
+    background-position: center; text-indent: -9999px; overflow: hidden;
+}
+
+/* =========================================
+   9. RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    /* Home Hero */
+    .hero-section { background-attachment: scroll; background-position: center; justify-content: center; padding: 0 20px; text-align: center; }
+    
+    /* Correção do Título Mobile */
+    .hero-content h1 { 
+        font-size: 2.2em !important; 
+        letter-spacing: 2px !important; 
+        line-height: 1.1; margin: 0 auto; word-wrap: break-word; 
+    }
+
+    .hero-content p { font-size: 1.1em; margin-bottom: 30px; }
+    
+    /* Menu Mobile */
+    .top-nav { position: relative; top: 0; right: 0; text-align: center; padding-top: 40px; margin-bottom: 40px; }
+    .top-nav ul li { display: block; margin: 15px 0; }
+    .top-nav ul li a { font-size: 1em; }
+    .top-nav ul li:not(:last-child)::after { content: ""; }
+
+    /* Layout Geral */
+    .content-grid { grid-template-columns: 1fr; }
+    .main-wrapper { margin-top: 20px; }
+    .internal-header { justify-content: center; height: auto; padding: 20px; }
+    .page-title h2 { font-size: 1.8em; }
+    .grid-info { grid-template-columns: 1fr; }
+
+    /* Correção da Nota Flutuante Mobile */
+    .float-box {
+        float: none !important;
+        width: 100% !important;
+        margin: 0 0 20px 0 !important;
+        position: static !important;
+        box-sizing: border-box;
+        top: 0 !important;
+    }
+
+    /* Galeria Mobile */
+    figure.ativo { flex-direction: column; align-items: center; }
+    figure.ativo img { width: 100%; max-width: 300px; margin-bottom: 20px; }
+    figure.ativo figcaption { padding: 0; text-align: center; }
+}
+

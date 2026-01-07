@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frame Festival - Inscrição</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-programa">
+
+    <header class="internal-header">
+        <nav class="top-nav internal-nav">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="programa.html">PROGRAMA</a></li>
+                <li><a href="galeria.html">GALERIA</a></li>
+                <li><a href="inscricao.html" class="active">INSCRIÇÃO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-wrapper marginTop-normal">
+        
+        <div class="content-box">
+            <div class="page-title mb-none">
+                <h2>GARANTE O TEU LUGAR</h2>
+                <p>A entrada é gratuita, mas a lotação é limitada.</p>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            
+            <main class="main-column">
+                <section class="content-box">
+                    <h3>📝 Ficha de Inscrição</h3>
+                    <p class="form-intro">Preenche os teus dados para receberes o bilhete eletrónico no email.</p>
+                    
+                    <form action="#" method="post">
+                        
+                        <div class="form-group">
+                            <label for="nome">Nome Completo:</label>
+                            <input type="text" id="nome" name="nome" placeholder="Como queres ser chamado?" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sessao">Sessão de Interesse:</label>
+                            <select id="sessao" name="sessao">
+                                <option value="geral">🎫 Passe Geral (Todos os dias)</option>
+                                <option value="dia1">📅 Dia 1 - Abertura & Ficção</option>
+                                <option value="dia2">📅 Dia 2 - Documentário & Experimental</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensagem">Dúvidas ou Comentários (Opcional):</label>
+                            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Precisas de acessibilidade especial? Diz-nos aqui."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">CONFIRMAR INSCRIÇÃO</button>
+                    </form>
+                </section>
+            </main>
+
+            <aside class="sidebar-column">
+                
+                <div class="content-box">
+                    <h3>📍 Onde Estamos</h3>
+                    <address class="address-clean">
+                        <strong>Universidade da Maia</strong><br>
+                        Av. Carlos de Oliveira Campos<br>
+                        Castêlo da Maia
+                    </address>
+                </div>
+
+                <div class="content-box destaque">
+                    <h3>📞 Contactos</h3>
+                    <p class="contact-item">Dúvidas? Fala connosco:</p>
+                    
+                    <ul class="list-none">
+                        
+                        <li class="contact-item">
+                            <strong>Catarina Carrasqueiro</strong><br>
+                            <a href="mailto:A046864@umaia.pt" class="contact-link">
+                                ✉️ A046864@umaia.pt
+                            </a>
+                        </li>
+
+                        <li style="margin-bottom: 15px;">
+                            <strong>Inês Marques</strong><br>
+                            <a href="mailto:A046573@umaia.pt" class="contact-link">
+                                ✉️ A046573@umaia.pt
+                            </a>
+                        </li>
+
+                        <li>
+                            <strong>Rita Pereira</strong><br>
+                            <a href="mailto:A046556@umaia.pt" class="contact-link">
+                                ✉️ A046556@umaia.pt
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </aside>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p class="logo-footer">Frame Festival 2026</p>
+            <address>
+                <a href="https://www.umaia.pt" target="_blank">Universidade da Maia</a> - Av. Carlos de Oliveira Campos
+            </address>
+            <p class="credits">&copy; Grupo 05 - Tecnologias Web</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
+
+
+
